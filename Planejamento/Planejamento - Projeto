@@ -1,0 +1,72 @@
+Planejamento - Propensão de um Cliente Aceitar um Contrato à Prazo de Depósitos
+
+O setor de Marketing é vital para qualquer empresa — ele constrói a imagem institucional, direciona ações de prospecção, mantém clientes engajados e promove produtos para aumentar a relação do cliente com a marca. Entre suas diversas funções, está o disparo de campanhas por e-mail, SMS e WhatsApp para oferecer produtos e gerar conversões.
+A instituição bancária portuguesa UCI Bank realiza ações de contratação de depósito bancário à prazo de seus clientes por meio de ações de telamarketing. Com o objetivo de melhorar essas ações, nos foi solitado estudos e análises para um melhor alocamento de recursos e construções de campanhas mais efetivas. Logo, aqui temos as seguintes perguntas a serem respondidas:
+
+- E se pudéssemos prever a probabilidade de um cliente aceitar um contrato pela ligação?
+- Será que existem grupos específicos em que a campanha é mais ou menos efetiva?
+- Existe a possibilidade de entender quais variáveis influenciam um cliente abrir uma campanha?
+
+Para essa pergunta e para o objetivo do time de marketing, temos a seguinte proposta de solução: 
+
+- Analisar os clientes que aceitaram ou não no passado para identificar clusters naturais. A partir disso, desenvolver um modelo preditivo capaz de antecipar a propensão de aceitação. Assim, gestores podem acessar indicadores estratégicos e analistas podem ter visão detalhada para ações de marketing.
+
+Entrega Final:
+
+* Estudo de variáveis que impactam a aceitação de contratos.
+* Análise de clusters para identificar perfis de clientes e direcionar campanhas.
+* Dashboard analítico para gestores e analistas, com indicadores de conversão e visão detalhada da base de clientes.
+
+Para a execução do planejamento, temos os seguinte OKR's e Sprints definidas.
+
+OKRs — Objetivos e Resultados-Chave
+
+Com base nas necessidades do negócio e no escopo da solução, defini os seguintes OKRs:
+
+✅ OKR1 — Realizar uma Análise de Regressão Logística para compreender o impacto das variáveis na aceitação do produto.
+✅ OKR2 — Realizar uma Análise de Clusters para identificar grupos de clientes com maior ou menor propensão à conversão.
+✅ OKR3 — Desenvolver um Modelo Preditivo com desempenho mínimo de AUC ≥ 70%, garantindo valor real na tomada de decisão.
+
+Esses OKRs funcionam como “norteadores” do projeto: eles me dizem onde quero chegar e como vou saber se estou no caminho certo.
+
+🏃‍♂️ Sprints — Execução Iterativa com Avaliação Contínua
+
+Para transformar os OKRs em ação, estruturei o trabalho em Sprints curtas, com entregas claras e momentos de avaliação ao final de cada uma. Isso permite ajustes rápidos e evita desperdício de tempo e esforço.
+
+Segue o planejamento das sprints:
+
+🔹 Sprint 1 — Análise de Regressão Logística + Avaliação do OKR1
+
+Entregável: estudo sobre o impacto das variáveis na aceitação do produto.
+
+Avaliação: insights estão alinhados com as hipóteses do negócio? Ajudam na tomada de decisão?
+
+🔹 Sprint 2 — Análise de Clusters + Avaliação do OKR2
+
+Entregável: identificação de grupos de clientes com perfis de maior ou menor conversão.
+
+Avaliação: os clusters fazem sentido para direcionar campanhas de forma mais eficiente?
+
+🔹 Sprint 3 — 1º Ciclo de Modelagem (CRISP-DM) + Avaliação do OKR3
+
+Entregável: primeiro modelo preditivo construído.
+
+Avaliação: o modelo alcançou AUC ≥ 70%? Se não, quais ajustes são necessários?
+
+🔹 Sprint 4 — 2º Ciclo de Modelagem (se necessário) + Reavaliação do OKR3
+
+Entregável: refinamento do modelo.
+
+Avaliação: atingimos o desempenho esperado? Caso contrário, avaliar viabilidade de encerrar ou pivotar.
+
+🔹 Sprint 5 — Deploy do Modelo + Construção do Script de Produção
+
+Entregável: modelo operacionalizado e pronto para rodar de forma automática.
+
+Objetivo: garantir reprodutibilidade e escalabilidade.
+
+🔹 Sprint 6 — Construção do Dashboard + Resumo do Estudo + Entrega Final
+
+Entregável: dashboard interativo no Streamlit + resumo executivo do estudo + disponibilização da solução aos stakeholders.
+
+Objetivo: entregar valor real ao negócio com visualização clara, acessível e acionável.
