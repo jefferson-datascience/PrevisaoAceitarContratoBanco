@@ -2,7 +2,7 @@
 
 Nesse projeto, vamos trabalhar no modelo de negócio bancário com o produto de depósitos bancários à prazo. Para isso, vamos utilizar os dados públicos da UCI que nos traz os dados de um banco português. As habilidades que serão melhoradas e aperfeiçoadas aqui são análise de regressão, análise de clusters e modelagem de dados para problemas de classificação. 
 
-## 2.0 Problema de Negócio
+# 2.0 Problema de Negócio
 
 O setor de Marketing é vital para qualquer empresa — ele constrói a imagem institucional, direciona ações de prospecção, mantém clientes engajados e promove produtos para aumentar a relação do cliente com a marca. Entre suas diversas funções, está o disparo de campanhas por e-mail, SMS e WhatsApp para oferecer produtos e gerar conversões.
 A instituição bancária portuguesa UCI Bank realiza ações de contratação de depósito bancário à prazo de seus clientes por meio de ações de telamarketing. Com o objetivo de melhorar essas ações, nos foi solitado estudos e análises para um melhor alocamento de recursos e construções de campanhas mais efetivas. Logo, aqui temos as seguintes perguntas a serem respondidas:
@@ -11,12 +11,12 @@ A instituição bancária portuguesa UCI Bank realiza ações de contratação d
 - Será que existem grupos específicos em que a campanha é mais ou menos efetiva?
 - Existe a possibilidade de entender quais variáveis influenciam um cliente abrir uma campanha?
 
-### 2.1 Proposta de Solução
+## 2.1 Proposta de Solução
 Para essa pergunta e para o objetivo do time de marketing, temos a seguinte proposta de solução: 
 
 - Analisar os clientes que aceitaram ou não no passado para identificar clusters naturais. A partir disso, desenvolver um modelo preditivo capaz de antecipar a propensão de aceitação. Assim, gestores podem acessar indicadores estratégicos e analistas podem ter visão detalhada para ações de marketing.
 
-### 2.2 Entrega Final:
+## 2.2 Entrega Final:
 
 * Estudo de variáveis que impactam a aceitação de contratos.
 * Análise de clusters para identificar perfis de clientes e direcionar campanhas.
@@ -24,9 +24,9 @@ Para essa pergunta e para o objetivo do time de marketing, temos a seguinte prop
 
 Para acessar todo a gestão do projeto, basta acessar esse link para ser direcionado para o documento que está aqui no github.
 
-## 3.0 [Parte 1] - Análise de Regressão
+# 3.0 [Parte 1] - Análise de Regressão
 
-### 3.1 Base Principal
+## 3.1 Base Principal
 
 Na primeira etapa de um projeto é entender as variáveis que estamos trabalhando e que informações elas carregam.
 
@@ -52,6 +52,41 @@ Logo abaixo, temos o dicionário das variáveis.
 |   poutcome    |   Resultado da campanha anterior de marketing. |
 |      y        |   Variável alvo para saber se o cliente assinou ou não termo de depósito. Categorias: 'failure','nonexistent','success'. |
 
+## 3.2 Análise Exploratória de Dados
 
+Com o entendimento das nossa variáveis, nos encaminhamos para uma análise exploratória dos dados para compreender se, os dados, são coerentes com o modelo de negócio apresentado. O processo nos levou ao seguinte resumo:
+
+**Job:** As profissões de management, technician, blue-collar e admin são as mais frequentes, o que é esperado, já que representam grande parte do mercado de trabalho. Observa-se que management, technician e admin têm maior propensão a aceitar o contrato, possivelmente por apresentarem maior poder aquisitivo e, em geral, maior conhecimento financeiro.
+
+**Marital:** 
+O status married se destaca tanto em volume quanto em taxa de aceitação. Isso é consistente, pois pessoas casadas tendem a apresentar maior estabilidade financeira e, em alguns casos, contam com renda familiar combinada. No caso de solteiros, a ausência de despesas familiares também pode aumentar a disponibilidade de recursos, o que pode favorecer a adesão.
+
+**Education:** A distribuição é coerente, já que boa parte da população possui apenas ensino fundamental (primary) ou médio (secondary). Proporcionalmente, indivíduos com ensino superior (tertiary) apresentam maior propensão a depósitos, possivelmente pelo acesso a cargos mais qualificados e maior conhecimento financeiro. Já aqueles com menor escolaridade tendem a ter menor adesão, reflexo de menor renda média e menor acesso a conhecimento financeiro.
+
+**Default:** A variável é clara: clientes inadimplentes dificilmente aderem ao contrato, pois não dispõem de recursos extras. Já os clientes adimplentes apresentam maior propensão, confirmando a consistência do dado.
+
+**Housing:** Clientes com financiamento imobiliário possuem compromissos de longo prazo que reduzem sua disponibilidade financeira para depósitos. Ainda assim, clientes com maior organização ou renda podem aderir. Proporcionalmente, os sem financiamento demonstram maior aceitação.
+
+**Loan:** O mesmo raciocínio vale para empréstimos pessoais. Em geral, são utilizados para quitação de dívidas ou consumo imediato, reduzindo a disponibilidade de recursos para depósitos.
+
+**Contact:** Contatos via celular têm maior efetividade, já que normalmente permitem falar diretamente com o cliente. Por telefone fixo, há mais barreiras, como terceiros atendendo ou indisponibilidade. Isso explica a maior aceitação quando o contato é feito por celular.
+
+**Month:** Observa-se maior adesão nos meses de maio a agosto. No entanto, não há informações suficientes para identificar o motivo. É necessário validar com as áreas de negócio se existem fatores sazonais ou campanhas específicas nesses períodos.
+
+**Poutcome:** Clientes que já tiveram experiências positivas em ofertas anteriores tendem a aceitar novas, o que reforça a importância de um bom relacionamento e histórico de satisfação.
+
+**Age:** A faixa entre 30 e 60 anos corresponde ao período de maior produtividade financeira, em que há busca por investimentos, depósitos e meios de pagamento. Por isso, essa faixa etária apresenta maior adesão.
+
+**Balance:** A maioria dos clientes apresenta saldos médios baixos, o que é esperado, já que a base é composta, em grande parte, por blue-collar, admin, aposentados (retired), desempregados (unemployed), empregados domésticos (housemaid), estudantes (student) e autônomos (self-employed). Apenas uma minoria possui saldos médios elevados.
+
+**Day:** Não se observa relação relevante entre o dia do contato e a adesão ao contrato. Portanto, essa variável não gera conclusões significativas.
+
+**Duration:** O comportamento é esperado em telemarketing: muitas ligações são encerradas rapidamente (duração zero). Quando o cliente permanece ouvindo a proposta, a chance de conversão aumenta, o que é refletido no histograma.
+
+**Campaign:** A cada nova tentativa de contato, a chance de aceitação diminui. Em geral, recusas iniciais reduzem a probabilidade de sucesso em ligações subsequentes. Assim, os dados são consistentes com o comportamento esperado.
+
+**Pdays:** Intervalos moderados entre contatos podem favorecer a aceitação, já que permitem maturação da ideia. Porém, intervalos muito longos podem reduzir a eficácia, devido a mudanças no perfil ou nas condições do cliente.
+
+**Previous:** Um histórico positivo de relacionamento com o banco reduz barreiras e aumenta a aceitação de novos produtos. Portanto, a variável se mostra coerente.
 
 
