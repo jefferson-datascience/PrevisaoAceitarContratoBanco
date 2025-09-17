@@ -89,4 +89,97 @@ O status married se destaca tanto em volume quanto em taxa de aceitação. Isso 
 
 **Previous:** Um histórico positivo de relacionamento com o banco reduz barreiras e aumenta a aceitação de novos produtos. Portanto, a variável se mostra coerente.
 
+## 3.3 Tratamento de Dados
 
+Com os dados consistentes, na fase de tratamento de dados, realizamos um estudo de outliers sobre os nossos dados. Era esperado em, algumas variáveis, a presença de outliers. Por exemplo, variáveis como saldo médio e duração de ligação.
+Durante o tratamento observou-se que os outliers eram esperados e, nessa situação, não poderíamos desconsiderá-los. Sendo assim, parte dessa tratativa deixamos para a fase de pré-processamento de dados e, também, para a fase de engenharia de atributos.
+
+## 3.4 Engenharia de Atributos
+
+Na fase da engenharia de atributos, realizamos alteramos as variáveis numéricas age, day e pdays para a visão de faixas, tornando elas categóricas.
+
+**Balanceamento dos Dados**: Após as devidas tratativas, realizamos o balanceamento dos dados utilizando o método de subamostragem da classe majoritária.
+
+## 3.5 Pré-Processamento dos Dados
+
+Na etapa de pré-processamento de dados utilizamos encoders clássicos como OrdinalEncoder, OneHotEncoder. Após tudo estar em formato numérico, padronizamos para colocar tudo sobre a mesma escala, aplicando o StandardScaler.
+
+## 3.6 Análise de Regressão
+
+Com o objetivo de entender como as variáveis independentes impactam na nossa variável alvo, que no caso, é a aceitação ou não do depósito bancário, utilizamos a regressão logística para obter os coeficiente de cada variável independente. Com uma regressão logística com uma capacidade de aprendizado de:
+
+| AUC Score | 87.5%|
+| Precisão  | 80.0%|
+| Recuperação | 79.3%|
+| F1-Score | 79.8% |
+
+Podemos extrair insights confiáveis e significativos. Segue abaixo o relatório:
+
+* *duration*(1.9): Clientes que passam mais tempo em ligações tendem a ter maior probabilidade de aceitar o contrato. Isso sugere estratégias para captação e retenção do cliente nos primeiros momentos de contato.
+
+* *pdays*(0.309): Quanto maior o tempo sem contato o cliente possui em relação a campanha anterior, maior a tendência da probailidade de aceitar o contrato. Isso sugere que uma saturação de ofertas pode atrapalhar na captação e, em uma possível, conversão do cliente.
+
+* *retired*(0.201): Clientes aposentados tendem aceitar o contrato. Isso sugere que aposentados querem construir recurso para uma possíveis planejamentos.
+
+* *previous*(0.194): Antes dessa campanha entrar em vigor, clientes com mais frequência de contato têm maior probabilidade de aceitar o contrato. Isso sugere que, um clientes que possuem uma relação saudável com a instituição (analisando a variável pdays), em termos de contato, estão mais propenso a aceitar o contrato.
+
+* *student*(0.163): Clientes que são estudantes têm uma maior probabilidade de aceitar o contrato. Isso sugere, esses clientes, estão construindo uma poupança ou algo dessa natureza, para irem para a faculdade, realizarem um intercâmbio ou obterem um bem-material.
+
+* *education*(0.14): Clientes com maiores níveis educacionais tendem a um maior a probabilidade dele aceitar o contrato. Isso sugere, que clientes com uma formação mais robusta possuem um planejamento financeiro o qual permitem eles de realizarem depósitos à prazo. 
+
+* *admin.*(0.10): Clientes que são administradores tendem a ter uma maior probabilidade de aceitar o contrato. Isso sugere que administradores possuem uma melhor planejamento financeiro para poder realizar esse depósitos.
+
+* *divorced*(0.099): Clientes divorciados possuem maior probabilidade de aceitar o contrato.
+
+* *managment*(0.093): Empresário possuem a probabilidade de aceitar o contrato.
+
+* *balance(0.085):* Quanto maior o saldo médio em conta de um cliente ocorre uma maior tendência de aumento da probabilidade de aceitar um contrato. Isso sugere que clientes 
+
+* As variáveis:
+
+    * *unemployed*
+    * *unknow_job*
+    * *married*
+    * *month*
+    * *celullar*
+    * *unknow_contact*
+    * *technician*
+    * *age*
+    * *day*
+    * *services*
+    * *housemaid*
+    * *enterpreneur*
+    * *single*
+    * *self-empolyed*
+
+
+não impactam na probabilidade de aceitar um contrato ou não, uma vez que, colocamos o critério de coeficiente entre 0.05 e -0.05 como não válidos.
+
+* *blue-collar*(-0.069): Clientes de colarinho azul possuem tendem a menos probabilidade de aceitar o contrato. Isso sugere que, esses clientes, por terem salário mais baixos, não possuem capital para realizar depósitos à prazo.
+
+* *default*(-0.227): Clientes que são inadimplentes tendem a ter menos probabilidade de aceitar o contrato. Isso sugere que, o fato da inadimplência iimplica que a prioridade não seria a construção de uma renda, mas sim, a quitação dessa dívida.
+
+* *loan*(-0.299): Clientes que possuem empréstimos tendem a ter menos probabilidade de aceitar o contrato. Isso sugere que, um empréstimo pessoal compromete o orçamento do cliente, o que impede de realizar aportes para depósitos.
+
+* *housing*(-0.496): Idem da variável anterior.
+
+* *telephone*(-0.514): Clientes que são contatados por telefone fixo tem uma baixa probabilidade de aceitar o contrato. Isso sugere que, é muito fácil para o cliente esquivar de tais ofertas, pois, não necessariamente é o cliente que atende, mas sim, outra pessoa.
+
+
+## 3.7 Recomendações
+
+1º) Construções de estratégias para captação, retenção e prolongamento da ligação com o clientes.
+
+2º) Planejamento para equilibrar a frequência de ofertas e o tempo de ficar sem contato para a maturação de ideia e, até, uma nova oferta.
+
+3º) Produtos de depósitos bancários  personalizados para clientes que são aposentados, estudantes e admnistradores, empresários.
+
+4º) Análise de saldo meédio de clientes para oferta do depósito
+
+5º) Foco em clientes com um formação educacional mais elevada.
+
+6º) Evitar clientes que já possuem algum comprometimento financeiro como empréstimos, financiamentos e inadimplências.
+
+7º) Analisar viabilidade de outro produto para clientes de colarinho azul ou adaptação do produto ofertado.
+
+8º) Evitar ao máximo contato por telefone. Sempre que possível, entrar em contato com o cliente pelo celular pessoal dele.
