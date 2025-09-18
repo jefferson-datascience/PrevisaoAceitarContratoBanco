@@ -24,4 +24,4 @@ Para essa pergunta e para o objetivo do time de marketing, temos a seguinte prop
 
 Para acessar todo a gestão do projeto, basta acessar esse link para ser direcionado para o documento que está aqui no github.
 
-**Análise de Regressão[https://github.com/jefferson-datascience/PrevisaoAceitarContratoBanco/tree/main/NotebooksDesenvolvimento]**
+**[Análise de Regressão](https://github.com/jefferson-datascience/PrevisaoAceitarContratoBanco/tree/main/NotebooksDesenvolvimento)**
