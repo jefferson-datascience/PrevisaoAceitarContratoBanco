@@ -108,6 +108,9 @@ Na etapa de pré-processamento de dados utilizamos encoders clássicos como Ordi
 
 Com o objetivo de entender como as variáveis independentes impactam na nossa variável alvo, que no caso, é a aceitação ou não do depósito bancário, utilizamos a regressão logística para obter os coeficiente de cada variável independente. Com uma regressão logística com uma capacidade de aprendizado de:
 
+
+|Métrica| Score|
+|-------|------|
 | AUC Score | 87.5%|
 | Precisão  | 80.0%|
 | Recuperação | 79.3%|
