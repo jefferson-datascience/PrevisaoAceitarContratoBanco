@@ -161,3 +161,4 @@ O que corresponde a uma redução de aproximadamente 84% no volume de prospecç�
 
 Portanto, o principal ganho trazido pelo modelo é a eficiência operacional: conseguimos identificar praticamente o mesmo número de clientes interessados com um volume muito menor de visitas, direcionando o time comercial para leads com maior probabilidade de conversão e reduzindo substancialmente o esforço comercial necessário
 
+
