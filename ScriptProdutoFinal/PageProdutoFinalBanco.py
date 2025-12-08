@@ -11,9 +11,28 @@ import plotly.express as px
 
 # ============================================================== Escrita da Primeira Página ===============================================================
 st.set_page_config(layout='wide')
+
+# Configurações da barra lateral
 st.sidebar.subheader('Navegue pelo Projeto', divider='gray', width='stretch')
+# Conteúdo na barra lateral
+
 
 pagina = st.sidebar.selectbox("",["Apresentação", "Estudo de Variáveis", "Análise de Agrupamento", "Resultados Modelo Preditivo", "Dashboard"])
+
+st.sidebar.markdown(
+    """
+    ### 🌐 Meus Contatos
+    <div class="sidebar-links">
+        <a href="https://www.linkedin.com/in/jeffersonhenriquecandido/" target="_blank">🔗 LinkedIn</a>
+    </div>
+    <div class="sidebar-links">
+        <a href="https://github.com/jefferson-datascience" target="_blank">💻 GitHub</a>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
+
 
 
 if pagina == "Apresentação":
