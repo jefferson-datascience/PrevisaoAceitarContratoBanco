@@ -6,8 +6,6 @@ import numpy as np
 import plotly.express as px
 
 # 1.0 Carregamento dos Dados
-#df1 = pd.read_parquet(r"\Users\jeffe\Documents\Projetos\ProjetosCienciaDados\PrevisaoAceitarContratoBanco\ScriptProdutoFinal\BaseAcoes.parquet", engine='fastparquet')
-
 
 # ============================================================== Escrita da Primeira Página ===============================================================
 st.set_page_config(layout='wide')
@@ -40,7 +38,7 @@ if pagina == "Apresentação":
 
     st.header('Projeto de Ciência de Dados - Marketing\n', width='stretch')
 
-    st.image(r"LogoMarketing1.png", width='stretch')
+    st.image(r"https://raw.githubusercontent.com/jefferson-datascience/PrevisaoAceitarContratoBanco/blob/main/ScriptProdutoFinal/LogoMarketing1.png", width='stretch')
 
     st.subheader('Apresentação', divider='gray')
 
@@ -82,7 +80,7 @@ elif pagina == "Estudo de Variáveis":
 
     st.header('Impacto das Variáveis nas Assinatura dos Contratos', divider='gray', width='stretch')
 
-    st.image(r"LogoMarketing2.png")
+    st.image(r"https://raw.githubusercontent.com/jefferson-datascience/PrevisaoAceitarContratoBanco/blob/main/ScriptProdutoFinal/LogoMarketing2.png")
 
     st.text('A primeira etapa em nosso projeto era entender como certas variáveis impactavam no assinatura de um contrato de depósito bancário à prazo. Para a realização desse estudo, desenvolvemos toda ' \
             'uma modelagem de dados, ideação de novas features e excução das devidas trativas para aplicar uma regressão logística e extrair esses fatores que nos mostrariam os impactos das variáveis no assinatura do ' \
@@ -131,7 +129,7 @@ elif pagina == "Análise de Agrupamento":
 
     st.header('Análise de Grupos', width='stretch', divider='gray')
     
-    st.image(r"LogoMarketing3.png", width='stretch', clamp=True, channels='RGB')
+    st.image(r"https://raw.githubusercontent.com/jefferson-datascience/PrevisaoAceitarContratoBanco/blob/main/ScriptProdutoFinal/LogoMarketing3.png", width='stretch', clamp=True, channels='RGB')
     
     st.text('A segunda etapa do nosso projeto era encontrar perfis naturais do nosso conjunto de dados. Isto é, dada as características dos nossos clientes como emprego, idade, saldo médio em conta, tempo em telefone e, ' \
             'outras características, conseguiriamos entender quais grupos naturais existiriam em nosso dataset de modo a conseguir organizar melhor as campanhas. Para atingir esse objetivo, utilizamos machine learning para encontrar' \
@@ -158,7 +156,7 @@ elif pagina == "Análise de Agrupamento":
 elif pagina == "Resultados Modelo Preditivo":
         
         st.header('Modelo Preditivo para Prever Probabilidade da Assinatura do Contrato', divider='gray', width='stretch')
-        st.image(r"LogoMarketing4.png", width='stretch')
+        st.image(r"https://raw.githubusercontent.com/jefferson-datascience/PrevisaoAceitarContratoBanco/blob/main/ScriptProdutoFinal/LogoMarketing4.png", width='stretch')
 
         st.text('Após entender como as variáveis impactam na assinatura do contrato e, também, quais são os perfis dos clientes que o banco tem, o time de marketing possui um boa quantidade de insumos e insights para apoiar as tomadas de decisões ' \
                 'de negócio e elaboração de estratégias de campanhas e ações. Por para finalizar e complementar todos esses estudos, desenvolvemos um modelo de Machine Learning, no caso, um modelo de classificação de modo a prever a ' \
@@ -190,7 +188,7 @@ elif pagina == "Resultados Modelo Preditivo":
 elif pagina=='Dashboard':
 
         # Carregamento dos Dados
-        base = pd.read_parquet('BaseAcoes.parquet', engine='fastparquet')
+        base = pd.read_parquet("https://raw.githubusercontent.com/jefferson-datascience/PrevisaoAceitarContratoBanco/blob/main/ScriptProdutoFinal/BaseAcoes.parquet", engine='fastparquet')
 
         # Construção dos Filtros
         faixas_probabilidades = base['ProbabilidadeAssinarContrato'].unique().tolist()
