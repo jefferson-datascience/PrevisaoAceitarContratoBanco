@@ -38,7 +38,7 @@ if pagina == "Apresentação":
 
     st.header('Projeto de Ciência de Dados - Marketing\n', width='stretch')
 
-    st.image("https://raw.githubusercontent.com/jefferson-datascience/Previsao-Vendas-Rossmann/main/Imagens/LogoRossmannSideBar.jpg", width='stretch')
+    st.image("https://raw.githubusercontent.com/jefferson-datascience/PrevisaoAceitarContratoBanco/blob/main/ScriptProdutoFinal/LogoMarketing1.png", width='stretch')
 
     st.subheader('Apresentação', divider='gray')
 
