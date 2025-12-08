@@ -38,7 +38,7 @@ if pagina == "Apresentação":
 
     st.header('Projeto de Ciência de Dados - Marketing\n', width='stretch')
 
-    st.image(r"https://raw.githubusercontent.com/jefferson-datascience/PrevisaoAceitarContratoBanco/blob/main/ScriptProdutoFinal/LogoMarketing1.png", width='stretch')
+    st.image(r"https://raw.githubusercontent.com/jefferson-datascience/PrevisaoAceitarContratoBanco/blob/main//ScriptProdutoFinal/LogoMarketing1.png", width='stretch')
 
     st.subheader('Apresentação', divider='gray')
 
@@ -156,7 +156,7 @@ elif pagina == "Análise de Agrupamento":
 elif pagina == "Resultados Modelo Preditivo":
         
         st.header('Modelo Preditivo para Prever Probabilidade da Assinatura do Contrato', divider='gray', width='stretch')
-        st.image(r"https://raw.githubusercontent.com/jefferson-datascience/PrevisaoAceitarContratoBanco/blob/main/ScriptProdutoFinal/LogoMarketing4.png", width='stretch')
+        st.image(r"https://raw.githubusercontent.com/jefferson-datascience/PrevisaoAceitarContratoBanco/blob/main//ScriptProdutoFinal/LogoMarketing4.png", width='stretch')
 
         st.text('Após entender como as variáveis impactam na assinatura do contrato e, também, quais são os perfis dos clientes que o banco tem, o time de marketing possui um boa quantidade de insumos e insights para apoiar as tomadas de decisões ' \
                 'de negócio e elaboração de estratégias de campanhas e ações. Por para finalizar e complementar todos esses estudos, desenvolvemos um modelo de Machine Learning, no caso, um modelo de classificação de modo a prever a ' \
