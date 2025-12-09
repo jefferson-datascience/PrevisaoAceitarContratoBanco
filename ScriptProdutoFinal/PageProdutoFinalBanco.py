@@ -31,14 +31,14 @@ st.sidebar.markdown(
 )
 
 
-
+caminho = "https://github.com/jefferson-datascience/PrevisaoAceitarContratoBanco/blob/main/ScriptProdutoFinal/"
 
 if pagina == "Apresentação":
 
 
     st.header('Projeto de Ciência de Dados - Marketing\n', width='stretch')
 
-    st.image("https://github.com/jefferson-datascience/PrevisaoAceitarContratoBanco/blob/main/ScriptProdutoFinal/LogoMarketing1.jpg", width='stretch')
+    st.image(r"https://github.com/jefferson-datascience/PrevisaoAceitarContratoBanco/blob/main/ScriptProdutoFinal/LogoMarketing1.jpg", width='stretch')
 
     st.subheader('Apresentação', divider='gray')
 
@@ -80,7 +80,7 @@ elif pagina == "Estudo de Variáveis":
 
     st.header('Impacto das Variáveis nas Assinatura dos Contratos', divider='gray', width='stretch')
 
-    st.image(r"https://raw.githubusercontent.com/jefferson-datascience/PrevisaoAceitarContratoBanco/blob/main/ScriptProdutoFinal/LogoMarketing2.png")
+    st.image("LogoMarketing2.jpg")
 
     st.text('A primeira etapa em nosso projeto era entender como certas variáveis impactavam no assinatura de um contrato de depósito bancário à prazo. Para a realização desse estudo, desenvolvemos toda ' \
             'uma modelagem de dados, ideação de novas features e excução das devidas trativas para aplicar uma regressão logística e extrair esses fatores que nos mostrariam os impactos das variáveis no assinatura do ' \
