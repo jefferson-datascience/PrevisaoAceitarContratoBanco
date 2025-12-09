@@ -188,7 +188,7 @@ elif pagina == "Resultados Modelo Preditivo":
 elif pagina=='Dashboard':
 
         # Carregamento dos Dados
-        base = pd.read_parquet("BaseAcoes.parquet", engine='fastparquet')
+        base = pd.read_parquet(caminho+"BaseAcoes.parquet", engine='fastparquet')
 
         # Construção dos Filtros
         faixas_probabilidades = base['ProbabilidadeAssinarContrato'].unique().tolist()
