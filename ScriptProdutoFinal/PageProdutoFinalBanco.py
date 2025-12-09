@@ -31,7 +31,7 @@ st.sidebar.markdown(
 )
 
 
-caminho = "https://raw.githubusercontent.com/jefferson-datascience/PrevisaoAceitarContratoBanco/tree/main/ScriptProdutoFinal/"
+caminho = "https://raw.githubusercontent.com/jefferson-datascience/PrevisaoAceitarContratoBanco/main/ScriptProdutoFinal/"
 
 if pagina == "Apresentação":
 
