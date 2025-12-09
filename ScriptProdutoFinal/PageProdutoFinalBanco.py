@@ -129,7 +129,7 @@ elif pagina == "Análise de Agrupamento":
 
     st.header('Análise de Grupos', width='stretch', divider='gray')
     
-    st.image(r"https://raw.githubusercontent.com/jefferson-datascience/PrevisaoAceitarContratoBanco/blob/main/ScriptProdutoFinal/LogoMarketing3.png", width='stretch', clamp=True, channels='RGB')
+    st.image("LogoMarketing3.jpg", width='stretch', clamp=True, channels='RGB')
     
     st.text('A segunda etapa do nosso projeto era encontrar perfis naturais do nosso conjunto de dados. Isto é, dada as características dos nossos clientes como emprego, idade, saldo médio em conta, tempo em telefone e, ' \
             'outras características, conseguiriamos entender quais grupos naturais existiriam em nosso dataset de modo a conseguir organizar melhor as campanhas. Para atingir esse objetivo, utilizamos machine learning para encontrar' \
@@ -156,7 +156,7 @@ elif pagina == "Análise de Agrupamento":
 elif pagina == "Resultados Modelo Preditivo":
         
         st.header('Modelo Preditivo para Prever Probabilidade da Assinatura do Contrato', divider='gray', width='stretch')
-        st.image(r"https://raw.githubusercontent.com/jefferson-datascience/PrevisaoAceitarContratoBanco/blob/main//ScriptProdutoFinal/LogoMarketing4.png", width='stretch')
+        st.image("LogoMarketing4.jpg", width='stretch')
 
         st.text('Após entender como as variáveis impactam na assinatura do contrato e, também, quais são os perfis dos clientes que o banco tem, o time de marketing possui um boa quantidade de insumos e insights para apoiar as tomadas de decisões ' \
                 'de negócio e elaboração de estratégias de campanhas e ações. Por para finalizar e complementar todos esses estudos, desenvolvemos um modelo de Machine Learning, no caso, um modelo de classificação de modo a prever a ' \
@@ -188,7 +188,7 @@ elif pagina == "Resultados Modelo Preditivo":
 elif pagina=='Dashboard':
 
         # Carregamento dos Dados
-        base = pd.read_parquet("https://raw.githubusercontent.com/jefferson-datascience/PrevisaoAceitarContratoBanco/blob/main/ScriptProdutoFinal/BaseAcoes.parquet", engine='fastparquet')
+        base = pd.read_parquet("BaseAcoes.parquet", engine='fastparquet')
 
         # Construção dos Filtros
         faixas_probabilidades = base['ProbabilidadeAssinarContrato'].unique().tolist()
