@@ -38,7 +38,7 @@ if pagina == "Apresentação":
 
     st.header('Projeto de Ciência de Dados - Marketing\n', width='stretch')
 
-    st.image(r"https://github.com/jefferson-datascience/PrevisaoAceitarContratoBanco/blob/main/ScriptProdutoFinal/LogoMarketing1.jpg", width='stretch')
+    st.image("LogoMarketing1.jpg", width='stretch')
 
     st.subheader('Apresentação', divider='gray')
 
